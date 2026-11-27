@@ -1,0 +1,15 @@
+Fishing Catch Timer 1.0.1 hotfix
+
+Fixes the Minecraft startup crash:
+IllegalClassLoadError: FishingCatchTimerClient is in a defined mixin package.
+
+Changes:
+- Mixin config package is now dev.fishingcatchtimer.mixin.
+- FishingHookAccessor is moved into that dedicated mixin package.
+- The client entrypoint and ordinary mod classes remain in dev.fishingcatchtimer.
+- Version bumped to 1.0.1 so it is easy to distinguish from the crashing jar.
+
+Build with JDK 25:
+  .\gradlew.bat clean build
+
+Install build\libs\fishing-catch-timer-1.0.1.jar and remove the older 1.0.0 jar.
